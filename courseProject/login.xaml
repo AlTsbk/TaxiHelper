@@ -1,0 +1,53 @@
+﻿<Window x:Class="courseProject.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseProject"
+        mc:Ignorable="d"
+        Title="Login"  Height="600" Width="400" ResizeMode="NoResize"
+        WindowStyle="None"
+        Style="{StaticResource Login}"
+    >
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35" ></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="400*"></RowDefinition>
+                <RowDefinition Height="200*"></RowDefinition>
+                <RowDefinition Height="200*"></RowDefinition>
+                <RowDefinition Height="200*"></RowDefinition>
+                <RowDefinition Height="300*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" WindowChrome.IsHitTestVisibleInChrome="True">
+                <Button Style="{StaticResource CloseBt}" Click="Button_Click_1" Template="{DynamicResource closeBt}" Background="#3F3B40">
+                    <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Taxi"  Style="{StaticResource Logo}" Foreground="#ffde00"></TextBlock>
+                    <TextBlock Text="Helper"  Style="{StaticResource Logo}" Foreground="#ffffff"></TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Label Content="login" Style="{StaticResource loginLabel}"></Label>
+                <TextBox x:Name="LoginBox" Style="{StaticResource loginBox}"></TextBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Label  Content="Password" Style="{StaticResource loginLabel}"></Label>
+                <PasswordBox x:Name="PasswordBox" Style="{StaticResource PasswordBox}"></PasswordBox>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Button Content="sumbit" Style="{StaticResource LoginButton}" Click="SumbitButton_Click" Template="{DynamicResource sumbitBt}"></Button>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <TextBlock x:Name="WarningMessage" Style="{StaticResource WarningMessage}"></TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
