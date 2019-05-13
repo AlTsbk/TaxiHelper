@@ -23,7 +23,7 @@ namespace courseProject
     /// </summary>
     public partial class Home : UserControl
     {
-        string connectionString;
+        
         public Home()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace courseProject
             FirstUnderLine.Background = Brushes.Yellow;
             EmployeesList.Visibility = Visibility.Hidden;
 
-            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            UpdateTripsList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,6 +40,7 @@ namespace courseProject
             SecondUnderLine.Background = Brushes.White;
             CurrentTripsList.Visibility = Visibility.Visible;
             EmployeesList.Visibility = Visibility.Hidden;
+            UpdateTripsList();
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
@@ -67,6 +68,23 @@ namespace courseProject
                 {
                     userRow ur = new userRow(u.Name, u.position, u.state);
                     Content.Children.Add(ur);
+                }
+            }
+        }
+        public void UpdateTripsList()
+        {
+            TripsList.Children.Clear();
+
+            using (TripContext db = new TripContext())
+            {
+                var Trips = db.Trips.Where(t => t.State == "В пути").OrderByDescending(t => t.Id);
+
+                foreach (Trip t in Trips)
+                {
+                    tripRow tr = new tripRow(t.Id, t.FromWhere, t.Destination, t.Name, t.Date, t.State, this);
+                    tr.CompleteButtons.Visibility = Visibility.Visible;
+                    tr.InfoBt.Visibility = Visibility.Hidden;
+                    TripsList.Children.Add(tr);
                 }
             }
         }

@@ -33,7 +33,11 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="2" x:Name="CurrentTripsList">
-           
+            <ScrollViewer Grid.Row="0" Margin="0 40">
+                <StackPanel  x:Name="TripsList" Margin="50 0">
+
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
         <Grid Grid.Row="2" x:Name="EmployeesList"  Visibility="Hidden">
             <StackPanel x:Name="Content" Margin="50">

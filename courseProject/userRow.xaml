@@ -34,7 +34,7 @@
                 <TextBlock x:Name="Position" Style="{StaticResource UserRowText}"></TextBlock>
             </Grid>
             <Grid Grid.Column="4">
-                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Visibility="Hidden"></Button>
+                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Foreground="Gold" Visibility="Hidden"></Button>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">

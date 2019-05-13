@@ -23,7 +23,7 @@ namespace courseProject
         Home home = new Home();
         employess employess = new employess();
         trips trips = new trips();
-        settings settings = new settings();
+        
 
         public MainWindow(string name, string position)
         {
@@ -31,12 +31,12 @@ namespace courseProject
             ContentField.Children.Add(home);
             ContentField.Children.Add(employess);
             ContentField.Children.Add(trips);
-            ContentField.Children.Add(settings);
+           
 
 
             employess.Visibility = Visibility.Hidden;
             trips.Visibility = Visibility.Hidden;
-            settings.Visibility = Visibility.Hidden;
+            
             
             AutorizeName.Text = "Пользователь: " + name;
 
@@ -74,7 +74,6 @@ namespace courseProject
         {
             employess.Visibility = Visibility.Hidden;
             trips.Visibility = Visibility.Hidden;
-            settings.Visibility = Visibility.Hidden;
             home.Visibility = Visibility.Hidden;
 
             Style style = Application.Current.FindResource("buttonStyle") as Style;
@@ -82,7 +81,6 @@ namespace courseProject
             Home.Style = style;
             AdminPanel.Style = style;
             Trips.Style = style;
-            Settings.Style = style;
 
             Button bt = sender as Button;
             switch (bt.Name.ToString())
@@ -90,19 +88,21 @@ namespace courseProject
                 case "Home":
                     home.Visibility = Visibility.Visible;
                     Home.Style = styleCl;
+                    home.UpdateContent();
+                    home.UpdateTripsList();
                     break;
                 case "AdminPanel":
                     employess.Visibility = Visibility.Visible;
                     AdminPanel.Style = styleCl;
+                    employess.CarsListUpdate();
+                    employess.EmployeeListUpdate();
                     break;
                 case "Trips":
                     trips.Visibility = Visibility.Visible;
                     Trips.Style = styleCl;
+                    trips.UpdateTripsList();
                     break;
-                case "Settings":
-                    settings.Visibility = Visibility.Visible;
-                    Settings.Style = styleCl;
-                    break;
+                
             }
 
 

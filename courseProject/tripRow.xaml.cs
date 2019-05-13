@@ -20,22 +20,45 @@ namespace courseProject
     /// </summary>
     public partial class tripRow : UserControl
     {
-        public tripRow(string tripsId, string fromWhere, string destination, string driver, string date)
+        Home em;
+
+        public tripRow(int tripsId, string fromWhere, string destination, string driver, string date, string state, Home empl = null)
         {
             InitializeComponent();
 
-            TripsNumber.Text = tripsId;
+            TripsNumber.Text = tripsId.ToString();
             From.Text = fromWhere;
             Destination.Text = destination;
             Driver.Text = driver;
             Date.Text = date;
-            
 
+            switch (state)
+            {
+                case "В пути":
+                    TripState.Source = new BitmapImage(new Uri("img/processing.png", UriKind.Relative));
+                    break;
+                case "Завершена":
+                    TripState.Source = new BitmapImage(new Uri("img/Complete.png", UriKind.Relative));
+                    break;
+                case "Отменена":
+                    TripState.Source = new BitmapImage(new Uri("img/canceled.png", UriKind.Relative));
+                    break;
+
+            }
+            em = empl;
         }
 
-        private void DeleteBt_Click(object sender, RoutedEventArgs e)
+        private void СanceledBt_Click(object sender, RoutedEventArgs e)
         {
-
+            confirmTrip ct = new confirmTrip(false, TripsNumber.Text,em);
+            ct.Show();
         }
+
+        private void CompleteBt_Click(object sender, RoutedEventArgs e)
+        {
+            confirmTrip ct = new confirmTrip(true, TripsNumber.Text,em);
+            ct.Show();
+        }
+
     }
 }

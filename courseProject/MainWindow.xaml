@@ -38,8 +38,7 @@
                         <RowDefinition Height="80*"></RowDefinition>
                         <RowDefinition Height="80*"></RowDefinition>
                         <RowDefinition Height="80*"></RowDefinition>
-                        <RowDefinition Height="80*"></RowDefinition>
-                        <RowDefinition Height="150*"></RowDefinition>
+                        <RowDefinition Height="230*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Image x:Name="UserImage" Source="img\Manager-Photo.png" Width="170" Height="170"></Image>
@@ -57,19 +56,15 @@
                             <TextBlock Style="{StaticResource MenuTextStyle}" Text="Поездки"></TextBlock>
                         </StackPanel>
                     </Button>
-                    <Button Grid.Row="3" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="Settings" Click="ChangePage_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
-                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Настройки"></TextBlock>
-                        </StackPanel>
-                    </Button>
-                    <Button Grid.Row="5" Style="{StaticResource buttonStyle}" Click="Button_Click" Template="{DynamicResource closeBt}">
+                    
+                    
+                    <Button Grid.Row="4" Style="{StaticResource buttonStyle}" Click="Button_Click" Template="{DynamicResource closeBt}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
                             <TextBlock Style="{StaticResource MenuTextStyle}" Text="Выход"></TextBlock>
                         </StackPanel>
                     </Button>
-                    <Button Grid.Row="4" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="AdminPanel" Click="ChangePage_Click" Visibility="Hidden">
+                    <Button Grid.Row="3" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="AdminPanel" Click="ChangePage_Click" Visibility="Hidden">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
                             <TextBlock Style="{StaticResource MenuTextStyle}" Text="Панель админа"></TextBlock>

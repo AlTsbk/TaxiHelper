@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Учеба\Курс 2\courseProject\courseProject\obj\Debug\
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\
 courseProject
 none
 false
 DEBUG;TRACE
-D:\Учеба\Курс 2\courseProject\courseProject\App.xaml
-14229933598
+D:\Учеба\Курс 2\TaxiHelper\courseProject\App.xaml
+14-402959044
 
-30-868140884
-171312030941
-addCar.xaml;addEmployee.xaml;carRow.xaml;DeleteCar.xaml;DeleteUser.xaml;employess.xaml;Home.xaml;login.xaml;MainWindow.xaml;settings.xaml;tripRow.xaml;trips.xaml;userRow.xaml;userRowForAdmin.xaml;
+33-517358125
+17-940608542
+addCar.xaml;addEmployee.xaml;carRow.xaml;confirmTrip.xaml;DeleteCar.xaml;DeleteUser.xaml;employess.xaml;Home.xaml;login.xaml;MainWindow.xaml;tripRow.xaml;trips.xaml;userRow.xaml;userRowForAdmin.xaml;
 
-False
+True
 

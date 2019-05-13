@@ -28,6 +28,7 @@ namespace courseProject
             FirstUnderLine.Background = Brushes.Yellow;
             addTrip.Visibility = Visibility.Hidden;
 
+            UpdateTripsList();
             updateLists();
 
         }
@@ -38,7 +39,8 @@ namespace courseProject
             SecondUnderLine.Background = Brushes.White;
             addTrip.Visibility = Visibility.Hidden;
             TripsList.Visibility = Visibility.Visible;
-            
+            UpdateTripsList();
+              
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
@@ -138,6 +140,22 @@ namespace courseProject
                 }
                 Driver.ItemsSource = UserList;
 
+            }
+        }
+
+        public void UpdateTripsList()
+        {
+            TripsList.Children.Clear();
+
+            using(TripContext db = new TripContext())
+            {
+                var Trips = db.Trips.OrderByDescending(t => t.Id);
+
+                foreach (Trip t in Trips)
+                {
+                    tripRow tr = new tripRow(t.Id, t.FromWhere, t.Destination, t.Name, t.Date, t.State);
+                    TripsList.Children.Add(tr);
+                }
             }
         }
     }
