@@ -44,7 +44,12 @@
                         <Label Content= "Год выпуска"></Label>
                         <TextBox Style="{StaticResource addReservTB}" x:Name="YearOfIssue"></TextBox>
                     </StackPanel>
-                    
+                    <StackPanel Style="{StaticResource InfField}" Margin="30 15">
+                        <Label Content="Класс"></Label>
+                        <ComboBox  VerticalAlignment="Top" Style="{StaticResource addReservCB}" Name="CarLevel">
+
+                        </ComboBox>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">

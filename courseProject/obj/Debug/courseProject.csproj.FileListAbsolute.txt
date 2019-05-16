@@ -86,8 +86,6 @@ D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\trips.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\userRow.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\userRowForAdmin.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.g.resources
-D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.Migrations.InitialCreate.resources
-D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.Migrations.addUserState.resources
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.Properties.Resources.resources
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.csproj.GenerateResource.cache
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.csproj.CoreCompileInputs.cache
@@ -96,3 +94,5 @@ D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.exe
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.pdb
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\confirmTrip.g.cs
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\confirmTrip.baml
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.Migrations.InitialCreate.resources
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\courseProject.Migrations.addCarLevelOnTrips.resources

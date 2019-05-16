@@ -88,7 +88,7 @@ namespace courseProject
 
                 foreach (Car c in cars)
                 {
-                    carRow cr = new carRow(c.CarName, c.CarNumber, c.YearOfIssue, c.State, this);
+                    carRow cr = new carRow(c.CarName, c.CarNumber, c.YearOfIssue, c.State, c.CarLevel, this);
                     carsListPanel.Children.Add(cr);
                 }
             }

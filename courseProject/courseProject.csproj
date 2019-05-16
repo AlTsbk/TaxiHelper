@@ -81,13 +81,13 @@
     <Compile Include="DeleteUser.xaml.cs">
       <DependentUpon>DeleteUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905122025419_InitialCreate.cs" />
-    <Compile Include="Migrations\201905122025419_InitialCreate.Designer.cs">
-      <DependentUpon>201905122025419_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201905132109095_InitialCreate.cs" />
+    <Compile Include="Migrations\201905132109095_InitialCreate.Designer.cs">
+      <DependentUpon>201905132109095_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905122249554_addUserState.cs" />
-    <Compile Include="Migrations\201905122249554_addUserState.Designer.cs">
-      <DependentUpon>201905122249554_addUserState.cs</DependentUpon>
+    <Compile Include="Migrations\201905132340543_addCarLevelOnTrips.cs" />
+    <Compile Include="Migrations\201905132340543_addCarLevelOnTrips.Designer.cs">
+      <DependentUpon>201905132340543_addCarLevelOnTrips.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Car.cs" />
@@ -196,11 +196,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201905122025419_InitialCreate.resx">
-      <DependentUpon>201905122025419_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905132109095_InitialCreate.resx">
+      <DependentUpon>201905132109095_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905122249554_addUserState.resx">
-      <DependentUpon>201905122249554_addUserState.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905132340543_addCarLevelOnTrips.resx">
+      <DependentUpon>201905132340543_addCarLevelOnTrips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -226,6 +226,11 @@
     <Resource Include="img\canceled.png" />
     <Resource Include="img\Complete.png" />
     <Resource Include="img\processing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Average.png" />
+    <Resource Include="img\Econom.png" />
+    <Resource Include="img\Premium.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

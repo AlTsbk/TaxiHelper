@@ -5,15 +5,15 @@ namespace courseProject.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<courseProject.Models.UserContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<courseProject.Models.TripContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "courseProject.Models.UserContext";
+            ContextKey = "courseProject.Models.TripContext";
         }
 
-        protected override void Seed(courseProject.Models.UserContext context)
+        protected override void Seed(courseProject.Models.TripContext context)
         {
             //  This method will be called after migrating to the latest version.
 

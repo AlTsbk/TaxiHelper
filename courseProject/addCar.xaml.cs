@@ -24,6 +24,13 @@ namespace courseProject
         public addCar(employess e)
         {
             InitializeComponent();
+
+            List<string> CarLevelList = new List<string>();
+            CarLevelList.Add("Премиум");
+            CarLevelList.Add("Средний");
+            CarLevelList.Add("Эконом");
+            CarLevel.ItemsSource = CarLevelList;
+
             em = e;
         }
 
@@ -48,6 +55,7 @@ namespace courseProject
                         car.CarNumber = CarNumber.Text;
                         car.YearOfIssue = YearOfIssue.Text;
                         car.State = "Свободна";
+                        car.CarLevel = CarLevel.SelectedValue.ToString();
 
                         db.Cars.Add(car);
                         db.SaveChanges();

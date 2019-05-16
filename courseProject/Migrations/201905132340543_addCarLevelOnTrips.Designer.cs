@@ -7,13 +7,13 @@ namespace courseProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addUserState : IMigrationMetadata
+    public sealed partial class addCarLevelOnTrips : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addUserState));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addCarLevelOnTrips));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905122249554_addUserState"; }
+            get { return "201905132340543_addCarLevelOnTrips"; }
         }
         
         string IMigrationMetadata.Source

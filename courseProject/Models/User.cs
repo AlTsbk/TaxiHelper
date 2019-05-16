@@ -18,6 +18,6 @@ namespace courseProject.Models
 
         public string state { get; set; }
 
-        //public Trip Trip { get; set; }
+        
     }
 }

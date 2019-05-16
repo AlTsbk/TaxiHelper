@@ -27,9 +27,10 @@ namespace courseProject
         public Home()
         {
             InitializeComponent();
-            //ContentField.Children.Add(register);
             FirstUnderLine.Background = Brushes.Yellow;
             EmployeesList.Visibility = Visibility.Hidden;
+
+
 
             UpdateTripsList();
         }

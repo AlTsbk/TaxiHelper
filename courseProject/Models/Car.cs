@@ -15,6 +15,7 @@ namespace courseProject.Models
         public string CarNumber { get; set; }
         public string YearOfIssue { get; set; }
         public string State { get; set; }
+        public string CarLevel { get; set; }
 
         //public Trip Trip { get; set; }
     }

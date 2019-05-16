@@ -17,6 +17,7 @@ namespace courseProject.Models
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string CarName { get; set; }
+        public string CarLevel { get; set; }
         public string Price { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }

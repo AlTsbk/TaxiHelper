@@ -39,59 +39,74 @@
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-        <Grid Grid.Row="2" x:Name="addTrip" Visibility="Hidden">
+        <Grid Grid.Row="2" x:Name="addTrip" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="8*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content= "Откуда"></Label>
-                            <TextBox x:Name="From" Style="{StaticResource addReservTB}"></TextBox>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content= "Стоимость"></Label>
-                            <TextBox  x:Name="Price" Style="{StaticResource addReservTB}"></TextBox>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content="Водитель"></Label>
-                            <ComboBox x:Name="Driver"  VerticalAlignment="Top" Style="{StaticResource addReservCB}">
+                <StackPanel Style="{StaticResource InfField}">
+                    <Label Content="Класс Поездки"></Label>
+                    <ComboBox x:Name="TripLevel"  VerticalAlignment="Top" Style="{StaticResource addReservCB}" SelectionChanged="TripLevel_SelectionChanged">
 
-                            </ComboBox>
-                        </StackPanel>
-                    </StackPanel>
-                </Grid>
-                <Grid Grid.Column="1">
-                    <StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content= "Куда"></Label>
-                            <TextBox x:Name="Destination" Style="{StaticResource addReservTB}"></TextBox>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content= "Номер телефона"></Label>
-                            <TextBox x:Name="PhoneNumber" Style="{StaticResource addReservTB}"></TextBox>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource InfField}">
-                            <Label Content="Машина"></Label>
-                            <ComboBox x:Name="Car"  VerticalAlignment="Top" Style="{StaticResource addReservCB}">
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Visibility="Hidden" x:Name="TripFild">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
 
-                            </ComboBox>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content= "Откуда"></Label>
+                                <TextBox x:Name="From" Style="{StaticResource addReservTB}"></TextBox>
+                            </StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content= "Стоимость"></Label>
+                                <TextBox  x:Name="Price" Style="{StaticResource addReservTB}"></TextBox>
+                            </StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content="Водитель"></Label>
+                                <ComboBox x:Name="Driver"  VerticalAlignment="Top" Style="{StaticResource addReservCB}">
+
+                                </ComboBox>
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content= "Куда"></Label>
+                                <TextBox x:Name="Destination" Style="{StaticResource addReservTB}"></TextBox>
+                            </StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content= "Номер телефона"></Label>
+                                <TextBox x:Name="PhoneNumber" Style="{StaticResource addReservTB}"></TextBox>
+                            </StackPanel>
+                            <StackPanel Style="{StaticResource InfField}">
+                                <Label Content="Машина"></Label>
+                                <ComboBox x:Name="Car"  VerticalAlignment="Top" Style="{StaticResource addReservCB}">
+
+                                </ComboBox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Grid Grid.Row="1">
-                <TextBlock Style="{StaticResource WarningMessage}" x:Name="WarnngMessage"></TextBlock>
-            </Grid>
-            <Grid Grid.Row="2">
-                <Button Style="{StaticResource LoginButton}" Template="{DynamicResource sumbitBt}" Content="Забронировать" Click="AddTrip_Click"></Button>
+                <Grid Grid.Row="1">
+                    <TextBlock Style="{StaticResource WarningMessage}" x:Name="WarnngMessage"></TextBlock>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Button Style="{StaticResource LoginButton}" Template="{DynamicResource sumbitBt}" Content="Забронировать" Click="AddTrip_Click"></Button>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

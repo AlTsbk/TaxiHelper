@@ -28,8 +28,14 @@ namespace courseProject
             FirstUnderLine.Background = Brushes.Yellow;
             addTrip.Visibility = Visibility.Hidden;
 
+            List<string> CarLevelList = new List<string>();
+            CarLevelList.Add("Премиум");
+            CarLevelList.Add("Средний");
+            CarLevelList.Add("Эконом");
+            TripLevel.ItemsSource = CarLevelList;
+
             UpdateTripsList();
-            updateLists();
+            
 
         }
 
@@ -49,7 +55,7 @@ namespace courseProject
             FirstUnderLine.Background = Brushes.White;
             TripsList.Visibility = Visibility.Hidden;
             addTrip.Visibility = Visibility.Visible;
-            updateLists();
+            
         }
 
         private void AddTrip_Click(object sender, RoutedEventArgs e)
@@ -111,16 +117,28 @@ namespace courseProject
                 WarnngMessage.Text = "Заполните все поля";
             }
 
-            updateLists();
+            updateLists(TripLevel.SelectedValue.ToString());
         }
 
-        public void updateLists()
+        public void updateLists(string level)
         {
             using (CarContext db = new CarContext())
             {
                 List<string> CarList = new List<string>();
-
                 var car = db.Cars.Where(c => c.State == "Свободна");
+                   
+                switch (level)
+                {   case "Премиум":
+                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Премиум");
+                        break;
+                    case "Средний":
+                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Средний");
+                        break;
+                    case "Эконом":
+                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Эконом");
+                        break;
+                }
+               
                 foreach (Car c in car)
                 {
                     CarList.Add(c.CarName);
@@ -157,6 +175,12 @@ namespace courseProject
                     TripsList.Children.Add(tr);
                 }
             }
+        }
+
+        private void TripLevel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            updateLists(TripLevel.SelectedValue.ToString());
+            TripFild.Visibility = Visibility.Visible;
         }
     }
 }
