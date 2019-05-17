@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="courseProject.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:courseProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="3"></RowDefinition>
+            <RowDefinition Height="700*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="addReserv" Grid.Column="0" Style="{StaticResource ReservBt}" Content="Текущие поездки" Template="{DynamicResource HomeBt}" Click="Button_Click"></Button>
+            <Button x:Name="RemoveReserv" Grid.Column="1" Style="{StaticResource ReservBt}" Content="Оценка работы"  Template="{DynamicResource HomeBt}" Click="Button_Click2"></Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" x:Name="FirstUnderLine" Margin="50 0" Style="{StaticResource UnderLine}">
+
+            </Grid>
+            <Grid Grid.Column="1" x:Name="SecondUnderLine" Margin="50 0" Style="{StaticResource UnderLine}">
+
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" x:Name="CurrentTripsList">
+            <ScrollViewer Grid.Row="0" Margin="0 40">
+                <StackPanel  x:Name="TripsList" Margin="50 0">
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="2" x:Name="EmployeesList"  Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Style="{StaticResource InfField}">
+                    <Label Content="Водитель"></Label>
+                    <ComboBox x:Name="DriverList"  VerticalAlignment="Top" Style="{StaticResource addReservCB}" SelectionChanged="DriverList_SelectionChanged">
+
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" x:Name="DriverListContent" Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel>
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Имя Водителя" FontSize="15"></Label>
+                            <TextBlock x:Name="DriverName" Style="{StaticResource UserRowText}" FontSize="40"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Кол-во поездок" FontSize="15"></Label>
+                            <TextBlock x:Name="NumberOfTrips" Style="{StaticResource UserRowText}" FontSize="50"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Заработок за всё время" FontSize="15"></Label>
+                            <TextBlock x:Name="Money" Style="{StaticResource UserRowText}" FontSize="50"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel HorizontalAlignment="Center">
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Поездок премиум класса" FontSize="15"></Label>
+                            <TextBlock x:Name="PremiumTrip" Style="{StaticResource UserRowText}" FontSize="50"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Поездок среднего класса" FontSize="15"></Label>
+                            <TextBlock x:Name="AverageTrip" Style="{StaticResource UserRowText}" FontSize="50"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource InfField}">
+                            <Label Content= "Поездок эконом класса" FontSize="15"></Label>
+                            <TextBlock x:Name="EconomTrip" Style="{StaticResource UserRowText}" FontSize="50"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

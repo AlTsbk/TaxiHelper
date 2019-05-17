@@ -178,7 +178,7 @@
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
             <Setter Property="Margin" Value="40 0 0 0"></Setter>
         </Style>
-        
+
         <!--Templates-->
         <ControlTemplate x:Key="HomeBt" TargetType="{x:Type ButtonBase}">
             <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">

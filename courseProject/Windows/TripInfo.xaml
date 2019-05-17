@@ -1,0 +1,61 @@
+﻿<Window x:Class="courseProject.Windows.TripInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseProject.Windows"
+        mc:Ignorable="d"
+        Title="Информация о поездке" Height="650" Width="450" ResizeMode="NoResize"
+        WindowStyle="None" BorderBrush="#2a282b" BorderThickness="1">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35" ></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" Background="#2a282b" Margin="0">
+            <Image Source="D:\Учеба\Курс 2\courseProject\courseProject\resourses\icon.png" Style="{StaticResource Icon}"></Image>
+            <TextBlock Style="{StaticResource AutorizeName}" x:Name="AutorizeName"></TextBlock>
+            <Button WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource CloseBt}" Click="Button_Click" BorderBrush="{x:Null}" Template="{DynamicResource closeBt}" Height="30">
+                <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="TripId" Style="{StaticResource UserRowText}" Text="Поездка номер"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="FromWhere" Style="{StaticResource UserRowText}" Text="Откуда"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="Destination" Style="{StaticResource UserRowText}" Text="Куда"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="Driver" Style="{StaticResource UserRowText}" Text="Имя водителя"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20" Orientation="Horizontal">
+                    <TextBlock x:Name="Car" Style="{StaticResource UserRowText}" Text="Машина"></TextBlock>
+                    <Image x:Name="CarLevel" Width="30" Height="30" Margin="20 0 0 0"></Image>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="Price" Style="{StaticResource UserRowText}" Text="Цена"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="CustomerNumber" Style="{StaticResource UserRowText}" Text="Телефон заказчика"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20">
+                    <TextBlock x:Name="Date" Style="{StaticResource UserRowText}" Text="Дата"></TextBlock>
+                </StackPanel>
+                <StackPanel Style="{StaticResource InfField}" Margin="20" Orientation="Horizontal">
+                    <TextBlock x:Name="Status" Style="{StaticResource UserRowText}" Text="Статус"></TextBlock>
+                    <Image Name="TripState" Width="30" Height="30" Margin="20 0 0 0"></Image>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

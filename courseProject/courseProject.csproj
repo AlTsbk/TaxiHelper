@@ -63,22 +63,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="addCar.xaml.cs">
+    <Compile Include="Pages\companyAssets.xaml.cs">
+      <DependentUpon>companyAssets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TripsForDriver.xaml.cs">
+      <DependentUpon>TripsForDriver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\addCar.xaml.cs">
       <DependentUpon>addCar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="addEmployee.xaml.cs">
+    <Compile Include="Windows\addEmployee.xaml.cs">
       <DependentUpon>addEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="carRow.xaml.cs">
+    <Compile Include="Rows\carRow.xaml.cs">
       <DependentUpon>carRow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="confirmTrip.xaml.cs">
+    <Compile Include="Windows\CarInfo.xaml.cs">
+      <DependentUpon>CarInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\confirmTrip.xaml.cs">
       <DependentUpon>confirmTrip.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeleteCar.xaml.cs">
+    <Compile Include="Windows\DeleteCar.xaml.cs">
       <DependentUpon>DeleteCar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeleteUser.xaml.cs">
+    <Compile Include="Windows\DeleteUser.xaml.cs">
       <DependentUpon>DeleteUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201905132109095_InitialCreate.cs" />
@@ -95,51 +107,73 @@
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\TripContext.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Home.xaml.cs">
+    <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\UserContext.cs" />
-    <Compile Include="tripRow.xaml.cs">
+    <Compile Include="Rows\tripRow.xaml.cs">
       <DependentUpon>tripRow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="trips.xaml.cs">
+    <Compile Include="Pages\trips.xaml.cs">
       <DependentUpon>trips.xaml</DependentUpon>
     </Compile>
-    <Compile Include="userRow.xaml.cs">
+    <Compile Include="Rows\userRow.xaml.cs">
       <DependentUpon>userRow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="userRowForAdmin.xaml.cs">
+    <Compile Include="Rows\userRowForAdmin.xaml.cs">
       <DependentUpon>userRowForAdmin.xaml</DependentUpon>
     </Compile>
-    <Page Include="addCar.xaml">
+    <Compile Include="Windows\ForDrivers.xaml.cs">
+      <DependentUpon>ForDrivers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TripInfo.xaml.cs">
+      <DependentUpon>TripInfo.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\companyAssets.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="addEmployee.xaml">
+    <Page Include="Pages\Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="carRow.xaml">
+    <Page Include="Pages\TripsForDriver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="confirmTrip.xaml">
+    <Page Include="Windows\addCar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeleteCar.xaml">
+    <Page Include="Windows\addEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeleteUser.xaml">
+    <Page Include="Rows\carRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="employess.xaml">
+    <Page Include="Windows\CarInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home.xaml">
+    <Page Include="Windows\confirmTrip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DeleteCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DeleteUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\employess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,7 +189,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="employess.xaml.cs">
+    <Compile Include="Pages\employess.xaml.cs">
       <DependentUpon>employess.xaml</DependentUpon>
     </Compile>
     <Compile Include="login.xaml.cs">
@@ -165,19 +199,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="tripRow.xaml">
+    <Page Include="Rows\tripRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="trips.xaml">
+    <Page Include="Pages\trips.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userRow.xaml">
+    <Page Include="Rows\userRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userRowForAdmin.xaml">
+    <Page Include="Rows\userRowForAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ForDrivers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TripInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

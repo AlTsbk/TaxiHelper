@@ -1,0 +1,58 @@
+﻿<Window x:Class="courseProject.Windows.CarInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseProject.Windows"
+        mc:Ignorable="d"
+        Title="Информация о машине" Height="650" Width="450" ResizeMode="NoResize"
+        WindowStyle="None" BorderBrush="#2a282b" BorderThickness="1">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35" ></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" Background="#2a282b" Margin="0">
+            <Image Source="D:\Учеба\Курс 2\courseProject\courseProject\resourses\icon.png" Style="{StaticResource Icon}"></Image>
+            <TextBlock Style="{StaticResource AutorizeName}" x:Name="AutorizeName"></TextBlock>
+            <Button WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource CloseBt}" Click="Button_Click" BorderBrush="{x:Null}" Template="{DynamicResource closeBt}" Height="30">
+                <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="7*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" x:Name="CarLevel" Width="150" Height="150"></Image>
+            <Grid Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="20">
+                        <TextBlock x:Name="CarName" Style="{StaticResource UserRowText}" Text="Название машины"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="20">
+                        <TextBlock x:Name="CarNumber" Style="{StaticResource UserRowText}" Text="Номер машины"></TextBlock>
+                    </StackPanel>
+                    
+                    <StackPanel Style="{StaticResource InfField}" Margin="20">
+                        <TextBlock x:Name="TripsYear" Style="{StaticResource UserRowText}" Text="Год выпуска"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="20">
+                        <TextBlock x:Name="TripsNumber" Style="{StaticResource UserRowText}" Text="Кол-во поездок на машине"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="20">
+                        <TextBlock x:Name="CarStatus" Style="{StaticResource UserRowText}" Text="Статус"></TextBlock>
+                        
+                    </StackPanel>
+                    
+                </StackPanel>
+                
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

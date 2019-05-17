@@ -1,4 +1,5 @@
 ﻿using courseProject.Models;
+using courseProject.Windows;
 using System.Configuration;
     using System.Data;
     using System.Data.SqlClient;
@@ -36,10 +37,19 @@ namespace courseProject
                     if ((LoginBox.Text == u.UserName) && (PasswordBox.Password.GetHashCode().ToString() == u.password))
                     {
                         
-
-                        MainWindow taskWindow = new MainWindow(u.Name, u.position);
-                        taskWindow.Show();
-                        this.Close();
+                        if(u.position == "Driver")
+                        {
+                            ForDrivers fd = new ForDrivers(u.Name);
+                            fd.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MainWindow taskWindow = new MainWindow(u.Name, u.position);
+                            taskWindow.Show();
+                            this.Close();
+                        }
+                        
                     }
                     else
                     {

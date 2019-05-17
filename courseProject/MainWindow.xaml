@@ -26,7 +26,7 @@
                 <ColumnDefinition Width="77*"/>
                 <ColumnDefinition Width="177*"/>
             </Grid.ColumnDefinitions>
-            <Grid Style="{StaticResource Content}" Grid.ColumnSpan="2" >
+            <Grid Style="{StaticResource Content}" Grid.ColumnSpan ="2" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="350*"></ColumnDefinition>
                     <ColumnDefinition Width="1500*"></ColumnDefinition>
@@ -56,12 +56,10 @@
                             <TextBlock Style="{StaticResource MenuTextStyle}" Text="Поездки"></TextBlock>
                         </StackPanel>
                     </Button>
-                    
-                    
-                    <Button Grid.Row="4" Style="{StaticResource buttonStyle}" Click="Button_Click" Template="{DynamicResource closeBt}">
+                    <Button Grid.Row="3" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="CompanyAssets" Click="ChangePage_Click">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
-                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Выход"></TextBlock>
+                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Активы компании"></TextBlock>
                         </StackPanel>
                     </Button>
                     <Button Grid.Row="3" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="AdminPanel" Click="ChangePage_Click" Visibility="Hidden">
@@ -70,6 +68,13 @@
                             <TextBlock Style="{StaticResource MenuTextStyle}" Text="Панель админа"></TextBlock>
                         </StackPanel>
                     </Button>
+                    <Button Grid.Row="4" Style="{StaticResource buttonStyle}" Click="Button_Click" Template="{DynamicResource closeBt}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Выход"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
                     <Grid Grid.Row="6">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Text="Taxi"  Style="{StaticResource Logo}" Foreground="#ffde00"></TextBlock>

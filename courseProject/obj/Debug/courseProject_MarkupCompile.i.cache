@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Учеба\Курс 2\TaxiHelper\courseProject\App.xaml
-14-402959044
+201298496785
 
-30-1480485501
+36384211239
 17-940608542
-addCar.xaml;addEmployee.xaml;carRow.xaml;confirmTrip.xaml;DeleteCar.xaml;DeleteUser.xaml;employess.xaml;Home.xaml;login.xaml;MainWindow.xaml;tripRow.xaml;trips.xaml;userRow.xaml;userRowForAdmin.xaml;
+Pages\companyAssets.xaml;Pages\Profile.xaml;Pages\TripsForDriver.xaml;Windows\addCar.xaml;Windows\addEmployee.xaml;Rows\carRow.xaml;Windows\CarInfo.xaml;Windows\confirmTrip.xaml;Windows\DeleteCar.xaml;Windows\DeleteUser.xaml;Pages\employess.xaml;Pages\Home.xaml;login.xaml;MainWindow.xaml;Rows\tripRow.xaml;Pages\trips.xaml;Rows\userRow.xaml;Rows\userRowForAdmin.xaml;Windows\ForDrivers.xaml;Windows\TripInfo.xaml;
 
-False
+True
 
