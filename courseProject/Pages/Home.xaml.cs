@@ -92,7 +92,7 @@ namespace courseProject
                     var trips = db.Trips.Where(t => (t.Name == DriverList.SelectedValue.ToString() && t.State == "Завершена"));
                     if (DriverList.SelectedValue.ToString() == "Вся компания")
                     {
-                        trips = db.Trips;
+                        trips = db.Trips.Where(t => t.State == "Завершена");
                     }
                     DriverName.Text = DriverList.SelectedValue.ToString();
                     NumberOfTrips.Text = trips.Count().ToString();

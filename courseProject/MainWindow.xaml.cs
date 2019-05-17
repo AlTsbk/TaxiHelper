@@ -67,7 +67,7 @@ namespace courseProject
         {
             login taskWindow = new login();
             taskWindow.Show();
-            taskWindow.WarningMessage.Text = "Log Out";
+            taskWindow.WarningMessage.Text = "Произошел выход из аккаунта";
             this.Close();
         }
 
@@ -111,6 +111,7 @@ namespace courseProject
                     trips.Visibility = Visibility.Visible;
                     Trips.Style = styleCl;
                     trips.UpdateTripsList();
+                    trips.updateLists();
                     break;
                 case "CompanyAssets":
                     companyAssets.Visibility = Visibility.Visible;

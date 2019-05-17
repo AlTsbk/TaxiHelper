@@ -118,34 +118,39 @@ namespace courseProject
                 WarnngMessage.Text = "Заполните все поля";
             }
 
-            updateLists(TripLevel.SelectedValue.ToString());
+            updateLists();
         }
 
-        public void updateLists(string level)
+        public void updateLists()
         {
-            using (CarContext db = new CarContext())
+            if(TripLevel.SelectedValue != null)
             {
-                List<string> CarList = new List<string>();
-                var car = db.Cars.Where(c => c.State == "Свободна");
-                   
-                switch (level)
-                {   case "Премиум":
-                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Премиум");
-                        break;
-                    case "Средний":
-                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Средний");
-                        break;
-                    case "Эконом":
-                        car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Эконом");
-                        break;
-                }
-               
-                foreach (Car c in car)
+                using (CarContext db = new CarContext())
                 {
-                    CarList.Add(c.CarName);
+                    List<string> CarList = new List<string>();
+                    var car = db.Cars.Where(c => c.State == "Свободна");
+
+                    switch (TripLevel.SelectedValue.ToString())
+                    {
+                        case "Премиум":
+                            car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Премиум");
+                            break;
+                        case "Средний":
+                            car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Средний");
+                            break;
+                        case "Эконом":
+                            car = db.Cars.Where(c => c.State == "Свободна" && c.CarLevel == "Эконом");
+                            break;
+                    }
+
+                    foreach (Car c in car)
+                    {
+                        CarList.Add(c.CarName);
+                    }
+                    Car.ItemsSource = CarList;
                 }
-                Car.ItemsSource = CarList;
             }
+            
 
             using (UserContext db = new UserContext())
             {
@@ -180,7 +185,7 @@ namespace courseProject
 
         private void TripLevel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            updateLists(TripLevel.SelectedValue.ToString());
+            updateLists();
             TripFild.Visibility = Visibility.Visible;
         }
     }

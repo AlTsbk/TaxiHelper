@@ -42,7 +42,7 @@
                 <PasswordBox x:Name="PasswordBox" Style="{StaticResource PasswordBox}"></PasswordBox>
             </Grid>
             <Grid Grid.Row="4">
-                <Button Content="sumbit" Style="{StaticResource LoginButton}" Click="SumbitButton_Click" Template="{DynamicResource sumbitBt}"></Button>
+                <Button Content="Войти" Style="{StaticResource LoginButton}" Click="SumbitButton_Click" Template="{DynamicResource sumbitBt}"></Button>
             </Grid>
 
             <Grid Grid.Row="5">
