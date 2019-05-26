@@ -53,6 +53,8 @@ namespace courseProject
                     CarLevel.Source = new BitmapImage(new Uri("../img/Econom.png", UriKind.Relative));
                     break;
             }
+
+
             em = e;
 
         }
@@ -68,6 +70,12 @@ namespace courseProject
         {
             CarInfo ci = new CarInfo(CarNumber.Text);
             ci.Show();
+        }
+
+        private void ChangeIngBt_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeCarInformation CCI = new ChangeCarInformation(em, CarNumber.Text);
+            CCI.Show();
         }
     }
 }

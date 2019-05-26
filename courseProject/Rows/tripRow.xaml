@@ -53,7 +53,7 @@
 
         </Grid>
         <Grid Grid.Column="7">
-            <Button x:Name="InfoBt" Style="{StaticResource DeleteBt}" Foreground="Gold" Content="" Click="InfoBt_Click"></Button>
+            <Button x:Name="InfoBt" Style="{StaticResource DeleteBt}" Foreground="Gold" Content="" Click="InfoBt_Click" Template="{DynamicResource InfoButton}"></Button>
         </Grid>
     </Grid>
     

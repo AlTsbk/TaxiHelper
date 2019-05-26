@@ -1,0 +1,63 @@
+﻿<Window x:Class="courseProject.Windows.ChangeUserInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseProject.Windows"
+        mc:Ignorable="d"
+        Title="Изменить информацию о машине" Height="600" Width="400" ResizeMode="NoResize"
+        WindowStyle="None" BorderBrush="#2a282b" BorderThickness="1">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35" ></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" Background="#2a282b" Margin="0">
+            <Image Source="../img/Th.png" Style="{StaticResource Icon}" Width="25" Height="25" VerticalAlignment="Center"></Image>
+            <TextBlock Style="{StaticResource AutorizeName}" x:Name="AutorizeName"></TextBlock>
+            <Button WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource CloseBt}" Click="Button_Click" BorderBrush="{x:Null}" Template="{DynamicResource closeBt}" Height="30">
+                <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="30 15">
+                        <Label Content= "Фамилия Имя"></Label>
+                        <TextBox Style="{StaticResource addReservTB}" x:Name="Name"></TextBox>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="30 15">
+                        <Label Content= "Логин"></Label>
+                        <TextBox Style="{StaticResource addReservTB}" x:Name="UserName"></TextBox>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="30 15">
+                        <Label Content= "Пароль"></Label>
+                        <TextBox Style="{StaticResource addReservTB}" x:Name="Password"></TextBox>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource InfField}" Margin="30 15">
+                        <Label Content="Должность"></Label>
+                        <ComboBox  VerticalAlignment="Top" Style="{StaticResource addReservCB}" Name="Position">
+
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Style="{StaticResource WarningMessage}" x:Name="WarnngMessage"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button Style="{StaticResource LoginButton}" Template="{DynamicResource sumbitBt}" Content="Именить" Margin="0 20" Click="addUser_Button"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

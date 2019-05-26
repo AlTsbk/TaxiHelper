@@ -25,7 +25,9 @@ namespace courseProject
         employess employess = new employess();
         trips trips = new trips();
         companyAssets companyAssets = new companyAssets();
-        
+        TripsForDriver DriverTrips;
+        Profile profile;
+
 
         public MainWindow(string name, string position)
         {
@@ -34,7 +36,7 @@ namespace courseProject
             ContentField.Children.Add(employess);
             ContentField.Children.Add(trips);
             ContentField.Children.Add(companyAssets);
-
+            
 
 
             companyAssets.Visibility = Visibility.Hidden;
@@ -58,6 +60,15 @@ namespace courseProject
                     break;
                 case "Driver":
                     UserImage.Source = new BitmapImage(new Uri("img/Driver-Photo.png", UriKind.Relative));
+                    DriverTrips = new TripsForDriver(name);
+                    profile = new Profile(name);
+                    ContentField.Children.Add(profile);
+                    ContentField.Children.Add(DriverTrips);
+
+                    DriverTrips.Visibility = Visibility.Hidden;
+                    Profile.Style = Application.Current.FindResource("buttonStyleCl") as Style;
+                    ForAdminAndManager.Visibility = Visibility.Hidden;
+                    ForDivers.Visibility = Visibility.Visible;
                     break;
             }
             
@@ -124,6 +135,30 @@ namespace courseProject
             }
 
 
+        }
+
+        private void ChangePageForDriver_Click(object sender, RoutedEventArgs e)
+        {
+            profile.Visibility = Visibility.Hidden;
+            trips.Visibility = Visibility.Hidden;
+
+            Style style = Application.Current.FindResource("buttonStyle") as Style;
+            Style styleCl = Application.Current.FindResource("buttonStyleCl") as Style;
+            Profile.Style = style;
+            Trips.Style = style;
+
+            Button bt = sender as Button;
+            switch (bt.Name.ToString())
+            {
+                case "Profile":
+                    Profile.Style = styleCl;
+                    profile.Visibility = Visibility.Visible;
+                    break;
+                case "Trips":
+                    Trips.Style = styleCl;
+                    trips.Visibility = Visibility.Visible;
+                    break;
+            }
         }
 
     }

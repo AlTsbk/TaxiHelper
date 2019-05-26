@@ -19,9 +19,10 @@
                 <ColumnDefinition Width="3*"></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
                 <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <Image Name="UserImage" Source="img/Admin-Photo.png" Width="30" Height="30"></Image>
+                <Image Name="UserImage" Source="../img/Admin-Photo.png" Width="30" Height="30"></Image>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -36,12 +37,13 @@
             <Grid Grid.Column="3">
                 <TextBlock x:Name="Position" Style="{StaticResource UserRowText}"></TextBlock>
             </Grid>
+            <Grid Grid.Column="5">
+                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Click="DeleteBt_Click" Template="{DynamicResource DeleteButton}"></Button>
+            </Grid>
             <Grid Grid.Column="4">
-                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Click="DeleteBt_Click"></Button>
+                <Button x:Name="ChangeIngBt" Content="" Style="{StaticResource DeleteBt}" Template="{DynamicResource ChangeInfoButton}" Click="ChangeIngBt_Click" Foreground="SkyBlue"></Button>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
-            <Separator></Separator>
-        </Grid>
+       
     </Grid>
 </UserControl>

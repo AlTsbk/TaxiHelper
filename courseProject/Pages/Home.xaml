@@ -41,7 +41,7 @@
         </Grid>
         <Grid Grid.Row="2" x:Name="EmployeesList"  Visibility="Hidden">
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2.5*"></RowDefinition>
                 <RowDefinition Height="8*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">

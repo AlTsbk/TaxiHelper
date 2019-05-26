@@ -102,9 +102,11 @@ D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\TripInfo.g.c
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\TripInfo.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\CarInfo.g.cs
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\CarInfo.baml
-D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ForDrivers.g.cs
-D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ForDrivers.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Pages\TripsForDriver.g.cs
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Pages\TripsForDriver.baml
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Pages\Profile.g.cs
 D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Pages\Profile.baml
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ChangeCarInformation.g.cs
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ChangeCarInformation.baml
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ChangeUserInformation.g.cs
+D:\Учеба\Курс 2\TaxiHelper\courseProject\obj\Debug\Windows\ChangeUserInformation.baml

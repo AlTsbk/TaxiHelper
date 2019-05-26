@@ -20,6 +20,7 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Image x:Name="CarLevel" Width="30" Height="30"></Image>
@@ -36,11 +37,14 @@
             <Grid Grid.Column="4">
                 <TextBlock x:Name="CarState" Style="{StaticResource UserRowText}"></TextBlock>
             </Grid>
-            <Grid Grid.Column="5">
-                <Button x:Name="InfoBt" Content="" Style="{StaticResource DeleteBt}" Foreground="Gold" Visibility="Hidden" Click="InfoBt_Click"></Button>
+            <Grid Grid.Column="6">
+                <Button x:Name="InfoBt" Content="" Style="{StaticResource DeleteBt}" Foreground="Gold" Visibility="Hidden" Template="{DynamicResource InfoButton}" Click="InfoBt_Click"></Button>
             </Grid>
             <Grid Grid.Column="5">
-                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Click="DeleteBt_Click"></Button>
+                <Button x:Name="ChangeIngBt" Content="" Style="{StaticResource DeleteBt}" Template="{DynamicResource ChangeInfoButton}" Click="ChangeIngBt_Click" Foreground="SkyBlue"></Button>
+            </Grid>
+            <Grid Grid.Column="6">
+                <Button x:Name="DeleteBt" Content="" Style="{StaticResource DeleteBt}" Template="{DynamicResource DeleteButton}" Click="DeleteBt_Click"></Button>
             </Grid>
         </Grid>
         

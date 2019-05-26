@@ -78,6 +78,7 @@ namespace courseProject.Pages
                     carRow cr = new carRow(c.CarName, c.CarNumber, c.YearOfIssue, c.State, c.CarLevel);
                     CarContent.Children.Add(cr);
                     cr.DeleteBt.Visibility = Visibility.Hidden;
+                    cr.ChangeIngBt.Visibility = Visibility.Hidden;
                     cr.InfoBt.Visibility = Visibility.Visible;
                 }
             }

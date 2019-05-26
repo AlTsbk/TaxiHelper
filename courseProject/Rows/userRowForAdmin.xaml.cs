@@ -1,4 +1,5 @@
-﻿using System;
+﻿using courseProject.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,12 @@ namespace courseProject
         {
             DeleteUser deleteUser = new DeleteUser(Login.Text, em);
             deleteUser.Show();
+        }
+
+        private void ChangeIngBt_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeUserInformation CUI = new ChangeUserInformation(em, Login.Text);
+            CUI.Show();
         }
     }
 }

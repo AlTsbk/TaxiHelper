@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:courseProject"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStyle="None"  WindowState="Maximized" MinHeight="700" MinWidth="1400">
+        Title="MainWindow" WindowStyle="None"  WindowState="Maximized" MinHeight="700" MinWidth="1400" Margin="5 5 5 0">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="35" ></WindowChrome>
     </WindowChrome.WindowChrome>
@@ -15,7 +15,7 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#2a282b" Margin="0">
-            <Image Source="D:\Учеба\Курс 2\courseProject\courseProject\resourses\icon.png" Style="{StaticResource Icon}"></Image>
+            <Image Source="img\Th.png" Style="{StaticResource Icon}" Width="25" Height="25" VerticalAlignment="Center"></Image>
             <TextBlock Style="{StaticResource AutorizeName}" x:Name="AutorizeName"></TextBlock>
             <Button WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource CloseBt}" Click="Button_Click_1" Margin="0 5 5 0" BorderBrush="{x:Null}" Template="{DynamicResource closeBt}">
                 <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />
@@ -31,7 +31,7 @@
                     <ColumnDefinition Width="350*"></ColumnDefinition>
                     <ColumnDefinition Width="1500*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Style="{StaticResource SideBar}">
+                <Grid Grid.Column="0" Style="{StaticResource SideBar}" x:Name="ForAdminAndManager">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="250*"></RowDefinition>
                         <RowDefinition Height="80*"></RowDefinition>
@@ -82,6 +82,46 @@
                         </StackPanel>
                     </Grid>
                     
+                </Grid>
+                <Grid Grid.Column="0" Style="{StaticResource SideBar}" x:Name="ForDivers" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250*"></RowDefinition>
+                        <RowDefinition Height="80*"></RowDefinition>
+                        <RowDefinition Height="80*"></RowDefinition>
+                        <RowDefinition Height="80*"></RowDefinition>
+                        <RowDefinition Height="310*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image x:Name="UserImageD" Source="img\Driver-Photo.png" Width="170" Height="170"></Image>
+                    </Grid>
+                    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="Profile" Click="ChangePageForDriver_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Профиль"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Row="2" Style="{StaticResource buttonStyle}" Template="{DynamicResource closeBt}" Name="DriversTrips" Click="ChangePageForDriver_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Поездки"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Row="3" Style="{StaticResource buttonStyle}" Click="Button_Click" Template="{DynamicResource closeBt}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource IconStyle}" Text=""></TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextStyle}" Text="Выход"></TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Grid Grid.Row="6">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="Taxi"  Style="{StaticResource Logo}" Foreground="#ffde00"></TextBlock>
+                            <TextBlock Text="Helper"  Style="{StaticResource Logo}" Foreground="#ffffff"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+
                 </Grid>
                 <Grid Grid.Column="1" x:Name="ContentField">
                     <Frame x:Name="myFrame"></Frame>

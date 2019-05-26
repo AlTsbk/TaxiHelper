@@ -18,7 +18,7 @@
 
 
         <Grid Grid.Row="0" Background="#2a282b" Margin="0">
-            <Image Source="D:\Учеба\Курс 2\courseProject\courseProject\resourses\icon.png" Style="{StaticResource Icon}"></Image>
+            <Image Source="../img/Th.png" Style="{StaticResource Icon}" Width="25" Height="25" VerticalAlignment="Center"></Image>
             <TextBlock Style="{StaticResource AutorizeName}" x:Name="AutorizeName"></TextBlock>
             <Button WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource CloseBt}" Click="Button_Click" BorderBrush="{x:Null}" Template="{DynamicResource closeBt}" Height="30">
                 <Path x:Name="Pt" Data="M0,0 M0.2,0.2 L 0.8,0.8 M0.2,0.8 L0.8,0.2 M1,1" Stretch="Uniform" Stroke="#6C7367" StrokeThickness="2" Height="20" VerticalAlignment="Center" />

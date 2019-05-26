@@ -3,7 +3,8 @@ using courseProject.Windows;
 using System.Configuration;
     using System.Data;
     using System.Data.SqlClient;
-    using System.Windows;
+using System.Linq;
+using System.Windows;
     using System.Windows.Controls;
 
 namespace courseProject
@@ -13,14 +14,13 @@ namespace courseProject
     /// </summary>
     public partial class login : Window
     {
-        string connectionString;
 
         
         public login()
         {
             InitializeComponent();
-            //bd
-            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            
+            
         }
 
         private void SumbitButton_Click(object sender, RoutedEventArgs e)
@@ -28,38 +28,35 @@ namespace courseProject
 
             using (UserContext db = new UserContext())
             {
-
                 var users = db.Users;
 
-                foreach (User u in users)
+                if (users.Count() == 0)
                 {
+                    User u = new User();
+                    u.Name = "admin";
+                    u.password = "admin".GetHashCode().ToString();
+                    u.position = "Admin";
+                    u.state = "Свободен";
+                    u.UserName = "admin";
 
-                    if ((LoginBox.Text == u.UserName) && (PasswordBox.Password.GetHashCode().ToString() == u.password))
-                    {
-                        
-                        if(u.position == "Driver")
-                        {
-                            ForDrivers fd = new ForDrivers(u.Name);
-                            fd.Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MainWindow taskWindow = new MainWindow(u.Name, u.position);
-                            taskWindow.Show();
-                            this.Close();
-                        }
-                        
-                    }
-                    else
-                    {
-                        WarningMessage.Text = "Неверный логин или пароль!";
-                    }
+                    db.Users.Add(u);
+                    db.SaveChanges();
+                }
 
+                User user = db.Users.Where(u => u.UserName == LoginBox.Text).FirstOrDefault();
+                if (user != null && user.password == PasswordBox.Password.GetHashCode().ToString())
+                {
+                    MainWindow taskWindow = new MainWindow(user.Name, user.position);
+                    taskWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    WarningMessage.Text = "Неверный логин или пароль!";
                 }
             }
 
-            
+
 
         }
 

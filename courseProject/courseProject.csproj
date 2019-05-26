@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -86,6 +89,12 @@
     <Compile Include="Windows\CarInfo.xaml.cs">
       <DependentUpon>CarInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ChangeCarInformation.xaml.cs">
+      <DependentUpon>ChangeCarInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ChangeUserInformation.xaml.cs">
+      <DependentUpon>ChangeUserInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\confirmTrip.xaml.cs">
       <DependentUpon>confirmTrip.xaml</DependentUpon>
     </Compile>
@@ -125,9 +134,6 @@
     <Compile Include="Rows\userRowForAdmin.xaml.cs">
       <DependentUpon>userRowForAdmin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ForDrivers.xaml.cs">
-      <DependentUpon>ForDrivers.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\TripInfo.xaml.cs">
       <DependentUpon>TripInfo.xaml</DependentUpon>
     </Compile>
@@ -156,6 +162,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CarInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ChangeCarInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ChangeUserInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,10 +231,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ForDrivers.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\TripInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -276,6 +286,12 @@
     <Resource Include="img\Average.png" />
     <Resource Include="img\Econom.png" />
     <Resource Include="img\Premium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Th.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

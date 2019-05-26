@@ -7,6 +7,8 @@ FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\addCar.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\addEmployee.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Rows\carRow.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\CarInfo.xaml;;
+FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\ChangeCarInformation.xaml;;
+FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\ChangeUserInformation.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\confirmTrip.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\DeleteCar.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\DeleteUser.xaml;;
@@ -18,6 +20,5 @@ FD:\Учеба\Курс 2\TaxiHelper\courseProject\Rows\tripRow.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Pages\trips.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Rows\userRow.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Rows\userRowForAdmin.xaml;;
-FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\ForDrivers.xaml;;
 FD:\Учеба\Курс 2\TaxiHelper\courseProject\Windows\TripInfo.xaml;;
 
